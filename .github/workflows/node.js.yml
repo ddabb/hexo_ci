@@ -36,5 +36,5 @@ jobs:
     - run: git config --global user.email "417144452@qq.com"
     - run: git add .
     - run: git commit -m "Update docs"
-    - run: git remote add origin https://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@github.com/ddabb/ddabb.github.io.git
+    # - run: git remote add origin https://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@github.com/ddabb/ddabb.github.io.git
     - run: git push -u origin master
