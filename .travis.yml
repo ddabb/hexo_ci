@@ -1,23 +1,31 @@
-language: node_js #设置语言
-
-node_js: "17.1.0" #设置语言版本
-
-cache:
-  directories:
-    - node_modules #缓存依赖
+language: node_js
+node_js: stable
 
 # S: Build Lifecycle
 install:
-  - npm install -g hexo-cli
   - npm install
+
+
+#before_script:
+ # - npm install -g gulp
 
 script:
   - hexo clean
   - hexo g
-  - hexo deploy
-  
 
-# 只有指定的分支提交时才会运行脚本
+after_script:
+  - cd ./public
+  - git init
+  - git config user.name "lifengsofts"
+  - git config user.email "lifengsofts@gmail.com"
+  - git add .
+  - git commit -m "Update docs"
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+# E: Build LifeCycle
+
 branches:
   only:
     - main
+env:
+ global:
+   - GH_REF: github.com/ddabb/ddabb.github.io.git
