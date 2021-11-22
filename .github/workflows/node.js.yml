@@ -32,7 +32,7 @@ jobs:
     - run: hexo clean
     - run: hexo g
     - run: dir
-    - run: cd ./public
+    - run: cd /d ./public
     - run: dir
     - run: git init
     - run: git config --global user.name "ddabb"
