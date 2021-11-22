@@ -1,4 +1,4 @@
-name: 使用第三方工具
+name: GitHub Pages
 
 on:
   push:
@@ -16,14 +16,9 @@ jobs:
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: '0.85.0'
-
-      - name: Build
-        run: hugo --minify
+  
+      - run: npm install
+      - run: npm run build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
@@ -34,3 +29,4 @@ jobs:
           user_name: ddabb
           user_email: 417144452@qq.com
           publish_branch: main
+
