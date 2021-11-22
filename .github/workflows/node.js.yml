@@ -36,7 +36,10 @@ jobs:
         git config user.name "ddabb"
         git config user.password "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"
         git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
-       
+   
+    - name: Dir Confirm
+      run: |
+        dir
 
     - name: Github Push
       run: |
