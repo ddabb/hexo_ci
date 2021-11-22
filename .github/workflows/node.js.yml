@@ -32,13 +32,11 @@ jobs:
       env:
         GIT_NAME: ddabb
         GIT_EMAIL: 417144452@qq.com
-        REPO: github.com/ddabb/ddabb.github.io
-        GH_TOKEN: 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
       run: |
         cd ./public && git init && git add .
         git config --global user.name $GIT_NAME
         git config --global user.email $GIT_EMAIL
         git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
-        git remote add origin "https://$GH_TOKEN@$REPO.git"
+        git remote set-url origin https://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@github.com/ddabb/ddabb.github.io.git
         git remote -v
         git push -u origin master
