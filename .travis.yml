@@ -10,6 +10,8 @@ install:
  # - npm install -g gulp
 
 script:
+  - git config --global user.email "417144452@qq.com"
+  - git config --global user.name "ddabb"
   - hexo clean
   - hexo g
   - hexo d
