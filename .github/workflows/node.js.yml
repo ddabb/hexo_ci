@@ -1,61 +1,48 @@
-name: Blog CI/CD
- 
-# 触发条件：在 push 到 hexo-blog-backup 分支后触发
-on:
+# workflow name
+name: Hexo Blog CI
+
+# master branch on push, auto run
+on: 
   push:
-    branches: 
-      - main
- 
-env:
-  TZ: Asia/Shanghai
- 
+    branches:
+      - master
+      
 jobs:
-  blog-cicd:
-    name: Hexo blog build & deploy
-    runs-on: ubuntu-latest # 使用最新的 Ubuntu 系统作为编译部署的环境
- 
+  build: 
+    runs-on: ubuntu-latest 
+        
     steps:
-    - name: Checkout codes
-      uses: actions/checkout@v2
- 
-    - name: Setup node
-      # 设置 node.js 环境
-      uses: actions/setup-node@v1
+    # check it to your workflow can access it
+    # from: https://github.com/actions/checkout
+    - name: Checkout Repository master branch
+      uses: actions/checkout@master 
+      
+    # from: https://github.com/actions/setup-node  
+    - name: Setup Node.js 10.x 
+      uses: actions/setup-node@master
       with:
-        node-version: '17.x'
- 
-    - name: Cache node modules
-      # 设置包缓存目录，避免每次下载
-      uses: actions/cache@v1
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
- 
-    - name: Install hexo dependencies
-      # 下载 hexo-cli 脚手架及相关安装包
+        node-version: "10.x"
+    
+    - name: Setup Hexo Dependencies
       run: |
-        npm install -g hexo-cli
+        npm install hexo-cli -g
         npm install
- 
-    - name: Generate files
-      # 编译 markdown 文件
+    
+    - name: Setup Deploy Private Key
+      env:
+        HEXO_DEPLOY_PRIVATE_KEY: ${{ secrets.HEXO_DEPLOY_PRIVATE_KEY }}
+      run: |
+        mkdir -p ~/.ssh/
+        echo "$HEXO_DEPLOY_PRIVATE_KEY" > ~/.ssh/id_rsa 
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan github.com >> ~/.ssh/known_hosts
+        
+    - name: Setup Git Infomation
+      run: | 
+        git config --global user.name 'ddabb' 
+        git config --global user.email '417144452@qq.com'
+    - name: Deploy Hexo 
       run: |
         hexo clean
-        hexo generate
- 
-    - name: Deploy hexo blog
-      env: 
-        # Github 仓库
-        GITHUB_REPO: github.com/ddabb/ddabb.github.io
-      # 将编译后的博客文件推送到指定仓库
-      run: |
-        cd ./public && git init && git add .
-        git config user.name "ddabb"
-        git config user.email "417144452@qq.com"
-        git add .
-        git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
-        git remote add origin "https://ddabb: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@github.com/ddabb/ddabb.github.io.git"  
-        git show-ref
-        git branch -m master main
-        git show-ref
-        git push -u origin main
+        hexo generate 
+        hexo deploy
