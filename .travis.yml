@@ -12,20 +12,8 @@ install:
 script:
   - hexo clean
   - hexo g
-
-after_script:
-  - cd ./public
-  - git init
-  - git config user.name "ddabb"
-  - git config user.email "417144452@qq.com"
-  - git add .
-  - git commit -m "Update docs"
-  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
-# E: Build LifeCycle
+  - hexo d
 
 branches:
   only:
     - main
-env:
- global:
-   - GH_REF: github.com/ddabb/ddabb.github.io.git
