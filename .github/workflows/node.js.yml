@@ -30,7 +30,10 @@ jobs:
     - run: npm install
     - run: hexo clean
     - run: hexo g
+    - run: set pa=%cd%
+    - run: echo %pa%
     - run: cd ./public
+    - run: dir ./b
     - run: git init
     - run: git config --global user.name "ddabb"
     - run: git config --global user.email "417144452@qq.com"
