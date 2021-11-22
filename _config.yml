@@ -94,7 +94,7 @@ theme: icarus
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:ddabb/ddabb.github.io.git
+  repo: https://ddabb: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@github.com/ddabb/ddabb.github.io.git
   branch: main
 
 live2d:

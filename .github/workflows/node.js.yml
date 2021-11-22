@@ -28,30 +28,9 @@ jobs:
         npm install hexo-cli -g
         npm install
     
-    - name: Setup Deploy Private Key
-      env:
-        HEXO_DEPLOY_PRIVATE_KEY: ${{ secrets.HEXO_DEPLOY_PRIVATE_KEY }}
-      run: |
-        mkdir -p ~/.ssh/
-        echo "$HEXO_DEPLOY_PRIVATE_KEY" > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
-    # 查看id_rsa内容
-        cat ~/.ssh/id_rsa
-        ssh-keyscan github.com >> ~/.ssh/known_hosts
-    # 查看known_hosts内容
-        cat ~/.ssh/known_hosts
-    # 测试git@github.com的访问情况
-        ssh -T git@github.com
-        
+       
     - name: Gen Hexo
       run: |
         hexo clean
         hexo generate 
-
-    - name: Setup Git Infomation
-      run: | 
-        git config --global user.name 'ddabb' 
-        git config --global user.email '417144452@qq.com'
-    - name: Deploy Hexo 
-      run: |
         hexo deploy
