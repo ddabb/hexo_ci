@@ -29,18 +29,16 @@ jobs:
         hexo clean
         hexo g 
         
-    - name: Github add
-      run: |
-        cd ./public && git init && git add .
-        
-    - name: Github Config
+    - name: Github add and commit
       env:
         GIT_NAME: ddabb
         GIT_EMAIL: 417144452@qq.com
       run: |
+        cd ./public && git init && git add .
         git config --global user.name $GIT_NAME
         git config --global user.email $GIT_EMAIL
         git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
+       
 
     - name: Github Push
       run: |
