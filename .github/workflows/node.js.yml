@@ -36,8 +36,6 @@ jobs:
         git config user.name "ddabb"
         git config user.password "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"
         git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
-        git remote set-url origin https://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@github.com/ddabb/ddabb.github.io.git
-        git remote -v
-        git push -u origin main
+        git push --force --quiet "https://${{ secrets.ACCESS_TOKEN }}@github.com/ddabb/ddabb.github.io.git" main:main
        
       
