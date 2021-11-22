@@ -30,13 +30,12 @@ jobs:
         hexo g 
         
     - name: Github add and commit
-      env:
-        GIT_NAME: ddabb
-        GIT_EMAIL: 417144452@qq.com
       run: |
         cd ./public && git init && git add .
         git config --global user.name $GIT_NAME
         git config --global user.email $GIT_EMAIL
+        git config --global user.email "417144452@qq.com"
+        git config --global user.name "ddabb"
         git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
        
 
