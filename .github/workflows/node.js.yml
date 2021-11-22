@@ -43,7 +43,7 @@ jobs:
 
     - name: Github Push
       run: |
-        git remote set-url origin https://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@github.com/ddabb/ddabb.github.io.git
+        git remote set-url origin https://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@github.com/ddabb/ddabb.github.io.git
         git remote -v
         git push -u origin main
         
