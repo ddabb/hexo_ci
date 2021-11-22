@@ -42,7 +42,6 @@ jobs:
 
     - name: Github Push
       run: |
-        git remote remove origin
         git remote set-url origin https://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@github.com/ddabb/ddabb.github.io.git
         git remote -v
         git push -u origin master
