@@ -27,20 +27,24 @@ jobs:
         npm i -g hexo-cli
         npm i
         hexo clean
-        hexo g        
-    - name: Github Commit
+        hexo g 
+        
+    - name: Github add
+      run: |
+        cd ./public && git init && git add .
+        
+    - name: Github Config
       env:
         GIT_NAME: ddabb
         GIT_EMAIL: 417144452@qq.com
       run: |
-        cd ./public && git init && git add .
         git config --global user.name $GIT_NAME
         git config --global user.email $GIT_EMAIL
         git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
-        git remote set-url origin https://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@github.com/ddabb/ddabb.github.io.git
-    - name: Github Push
 
+    - name: Github Push
       run: |
+        git remote set-url origin https://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@github.com/ddabb/ddabb.github.io.git
         git remote -v
         git push -u origin master
         
