@@ -28,7 +28,7 @@ jobs:
         npm i
         hexo clean
         hexo g        
-    - name: Deploy to Github Pages
+    - name: Github Commit
       env:
         GIT_NAME: ddabb
         GIT_EMAIL: 417144452@qq.com
@@ -38,5 +38,10 @@ jobs:
         git config --global user.email $GIT_EMAIL
         git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
         git remote set-url origin https://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@github.com/ddabb/ddabb.github.io.git
+    - name: Github Push
+
+      run: |
         git remote -v
         git push -u origin master
+        
+      
