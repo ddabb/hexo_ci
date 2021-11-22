@@ -32,6 +32,7 @@ jobs:
     - name: Github add and commit
       run: |
         cd ./public && git init && git add .
+        git branch -m master main
         git config user.email "417144452@qq.com"
         git config user.name "ddabb"
         git config user.password "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"
