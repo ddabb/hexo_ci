@@ -1,43 +1,42 @@
-# This workflow will do a clean install of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
-name: Node.js CI
+name: Deployment
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches: [main] # only push events on source branch trigger deployment
 
 jobs:
-  build:
-
-    runs-on: windows-latest
-
-    strategy:
-      matrix:
-        node-version: [17.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+  hexo-deployment:
+    runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Shanghai
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
+    - name: Checkout source
+      uses: actions/checkout@v2
       with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: dir
-    - run: npm install -g hexo-cli
-    - run: npm install
-    - run: hexo clean
-    - run: hexo g
-    - run: dir
-    - run: Set-location -Path D:\a\hexo_travis_ci\hexo_travis_ci\public
-    - run: dir
-    - run: git init
-    - run: git config --global user.name "ddabb"
-    - run: git config --global user.email "417144452@qq.com"
-    - run: git remote add origin https://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@github.com/ddabb/ddabb.github.io.git
-    - run: git add .
-    - run: git commit -m "Update docs"
-    - run: git push -u origin master
+        submodules: true
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '17.x'
+
+    - name: Install dependencies & Generate static files
+      run: |
+        node -v
+        npm i -g hexo-cli
+        npm i
+        hexo clean
+        hexo g        
+    - name: Deploy to Github Pages
+      env:
+        GIT_NAME: ddabb
+        GIT_EMAIL: 417144452@qq.com
+        REPO: github.com/ddabb/ddabb.github.io
+        GH_TOKEN: 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
+      run: |
+        cd ./public && git init && git checkout -b main && git add .
+        git config --global user.name $GIT_NAME
+        git config --global user.email $GIT_EMAIL
+        git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
+        git push --force --quiet "https://$GH_TOKEN@$REPO" master:master
