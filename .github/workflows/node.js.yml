@@ -32,7 +32,7 @@ jobs:
     - run: hexo clean
     - run: hexo g
     - run: dir
-    - run: cd /d ./public
+    - run: cd "D:\a\hexo_travis_ci\hexo_travis_ci\public"
     - run: dir
     - run: git init
     - run: git config --global user.name "ddabb"
