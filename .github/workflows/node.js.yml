@@ -9,7 +9,7 @@ on:
       
 jobs:
   build: 
-    runs-on: ubuntu-latest 
+    runs-on: windows-latest 
         
     steps:
     # check it to your workflow can access it
