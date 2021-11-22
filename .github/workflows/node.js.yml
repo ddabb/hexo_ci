@@ -35,12 +35,10 @@ jobs:
         mkdir -p ~/.ssh/
         echo "$HEXO_DEPLOY_PRIVATE_KEY" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
-    # 查看id_rsa内容
+
         cat ~/.ssh/id_rsa
         ssh-keyscan github.com >> ~/.ssh/known_hosts
-    # 查看known_hosts内容
         cat ~/.ssh/known_hosts
-    # 测试git@github.com的访问情况
         ssh -T git@github.com
         
     - name: Gen Hexo
