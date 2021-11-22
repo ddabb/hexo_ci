@@ -5,6 +5,9 @@
     "hexo": {
         "version": "5.4.0"
     },
+    "scripts": {
+        "build": "hexo generate"
+    },
     "dependencies": {
         "bulma-stylus": "^0.8.0",
         "g": "^2.0.1",

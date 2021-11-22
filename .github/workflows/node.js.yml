@@ -1,40 +1,32 @@
-# workflow name
-name: Hexo Blog CI
+name: GitHub Pages
 
-# master branch on push, auto run
-on: 
+on:
   push:
     branches:
-      - main
-      
+      - main  # Set a branch name to trigger deployment
+  pull_request:
+
 jobs:
-  build: 
-    runs-on: windows-latest 
-        
+  deploy:
+    runs-on: ubuntu-20.04
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-    # check it to your workflow can access it
-    # from: https://github.com/actions/checkout
-    - name: Checkout Repository master branch
-      uses: actions/checkout@master 
-      
-    # from: https://github.com/actions/setup-node  
-    - name: Setup Node.js 17.x 
-      uses: actions/setup-node@master
-      with:
-        node-version: lts/*
-    
-    - name: Setup Hexo Dependencies
-      run: |
-        npm install hexo-cli -g
-        npm install
-    
-    - name: Setup Hexo Dependencies
-      run: |
-        git config --global user.email "417144452@qq.com"
-        git config --global user.name "ddabb"
-       
-    - name: Gen Hexo
-      run: |
-        hexo clean
-        hexo generate 
-        hexo deploy
+      - uses: actions/checkout@v2
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+  
+      - run: npm install
+      - run: npm run build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          external_repository: ddabb/ddabb.github.io
+          publish_dir: ./public
+          user_name: ddabb
+          user_email: 417144452@qq.com
+          publish_branch: main
+
