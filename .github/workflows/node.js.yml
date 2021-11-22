@@ -44,7 +44,7 @@ jobs:
         ssh-keyscan github.com >> ~/.ssh/known_hosts
         cat ~/.ssh/known_hosts
         echo 查看.ssh.config的内容
-        vi ~/.ssh.config
+        cat ~/.ssh.config
         ssh -T git@github.com
         
     - name: Gen Hexo
