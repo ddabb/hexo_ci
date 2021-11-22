@@ -39,6 +39,8 @@ jobs:
         cat ~/.ssh/id_rsa
         ssh-keyscan github.com >> ~/.ssh/known_hosts
         cat ~/.ssh/known_hosts
+        ssh-agent -s
+        ssh-add ~/.ssh/id_rsa
         ssh -T git@github.com
         
     - name: Gen Hexo
