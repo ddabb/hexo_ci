@@ -39,5 +39,6 @@ jobs:
         git config --global user.name $GIT_NAME
         git config --global user.email $GIT_EMAIL
         git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
-        git remote add origin "https://$GH_TOKEN@$REPO"
+        git remote add origin "https://$GH_TOKEN@$REPO.git"
+        git remote -v
         git push -u origin master
