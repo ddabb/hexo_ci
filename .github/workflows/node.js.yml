@@ -31,6 +31,9 @@ jobs:
     - run: npm install
     - run: hexo clean
     - run: hexo g
+    - run: dir
+    - run: cd ./public
+    - run: dir
     - run: git init
     - run: git config --global user.name "ddabb"
     - run: git config --global user.email "417144452@qq.com"
