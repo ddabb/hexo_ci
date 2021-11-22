@@ -32,11 +32,10 @@ jobs:
     - name: Github add and commit
       run: |
         cd ./public && git init && git add .
-        git branch -m master main
         git config user.email "417144452@qq.com"
         git config user.name "ddabb"
         git config user.password "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"
         git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
-        git push --force --quiet "https://${{ secrets.ACCESS_TOKEN }}@github.com/ddabb/ddabb.github.io.git" main:main
+        git push --force --quiet "https://${{ secrets.ACCESS_TOKEN }}@github.com/ddabb/ddabb.github.io.git" master:main
        
       
