@@ -202,7 +202,7 @@ donates:
 # Share plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
 share:
-    type: sharethis
+    type: bdshare
     # URL to the ShareThis share plugin script
     install_url: ''
 # Sidebar configurations.
