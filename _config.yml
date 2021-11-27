@@ -157,7 +157,3 @@ restful:
   use_tag_slug: true      # Use slug for filename of tag data
   post: true               # 文章数据
   pages: true
-
-addlink:
-  before_text: hello # text before the post link
-  after_text: bye # text after the post link
