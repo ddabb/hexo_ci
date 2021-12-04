@@ -1,5 +1,5 @@
 ---
-title: 测试CI是否正常
+title: 第一个python手写识别程序
 toc: true
 date: 2021-11-21 19:25:27
 tags:
