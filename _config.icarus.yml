@@ -179,11 +179,6 @@ donates:
         url: 'https://www.buymeacoffee.com/ddabb'
     # Patreon donate button configurations
     -
-        type: patreon
-        # URL to the Patreon page
-        url: ''
-    # Wechat donate button configurations
-    -
         type: wechat
         # Wechat qrcode image URL
         qrcode: ''
