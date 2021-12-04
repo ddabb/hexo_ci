@@ -1,0 +1,44 @@
+---
+title: pdffile.json
+toc: true
+top: 100
+mathjax: false
+date: 2021-12-04 21:47:46
+tags:
+- 项目整合管理
+- 启动过程组
+- 制定项目章程
+- pdffile.json
+categories:
+- 项目管理知识
+---
+{
+    "title": "上海携程Java高级.pdf",
+    "desc": "描述",
+    "fileurl": "/pdfFile/上海携程Java高级.pdf",
+    "imglist": [
+        "/Pdf2Png/上海携程Java高级/上海携程Java高级_00.png",
+        "/Pdf2Png/上海携程Java高级/上海携程Java高级_01.png",
+        "/Pdf2Png/上海携程Java高级/上海携程Java高级_02.png",
+        "/Pdf2Png/上海携程Java高级/上海携程Java高级_03.png",
+        "/Pdf2Png/上海携程Java高级/上海携程Java高级_04.png",
+        "/Pdf2Png/上海携程Java高级/上海携程Java高级_05.png",
+        "/Pdf2Png/上海携程Java高级/上海携程Java高级_06.png",
+        "/Pdf2Png/上海携程Java高级/上海携程Java高级_07.png",
+        "/Pdf2Png/上海携程Java高级/上海携程Java高级_08.png",
+        "/Pdf2Png/上海携程Java高级/上海携程Java高级_09.png",
+        "/Pdf2Png/上海携程Java高级/上海携程Java高级_10.png",
+        "/Pdf2Png/上海携程Java高级/上海携程Java高级_11.png",
+        "/Pdf2Png/上海携程Java高级/上海携程Java高级_12.png",
+        "/Pdf2Png/上海携程Java高级/上海携程Java高级_13.png",
+        "/Pdf2Png/上海携程Java高级/上海携程Java高级_14.png",
+        "/Pdf2Png/上海携程Java高级/上海携程Java高级_15.png",
+        "/Pdf2Png/上海携程Java高级/上海携程Java高级_16.png",
+        "/Pdf2Png/上海携程Java高级/上海携程Java高级_17.png"
+    ],
+    "tags": [
+        "上海",
+        "java"
+    ],
+    "classify": "面试题"
+}
