@@ -168,12 +168,6 @@ comment:
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
 donates:
-    # "Afdian.net" donate button configurations
-    -
-        type: afdian
-        # URL to the "Afdian.net" personal page
-        url: ''
-    # Alipay donate button configurations
     -
         type: alipay
         # Alipay qrcode image URL
@@ -182,7 +176,7 @@ donates:
     -
         type: buymeacoffee
         # URL to the "Buy me a coffee" page
-        url: ''
+        url: 'https://www.buymeacoffee.com/ddabb'
     # Patreon donate button configurations
     -
         type: patreon
