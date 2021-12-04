@@ -171,17 +171,24 @@ donates:
     -
         type: alipay
         # Alipay qrcode image URL
-        qrcode: ''
+        qrcode: 'photos/images/支付宝收款码.jpg'
     # "Buy me a coffee" donate button configurations
     -
         type: buymeacoffee
         # URL to the "Buy me a coffee" page
         url: 'https://www.buymeacoffee.com/ddabb'
     # Patreon donate button configurations
+
+    -
+        type: patreon
+        # URL to the Patreon page
+        url: 'https://www.patreon.com/ddabb'
+
+    # Wechat donate button configurations
     -
         type: wechat
         # Wechat qrcode image URL
-        qrcode: ''
+        qrcode: 'photos/images/微信收款码.jpg'
 # Share plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
 # share:
