@@ -28,7 +28,7 @@
         "hexo-generator-feed": "^1.2.2",
         "hexo-generator-index": "^0.2.1",
         "hexo-generator-json-content": "^4.2.3",
-        "hexo-generator-restful": "^0.2.3",
+        "hexo-generator-restful": "github:ddabb/hexo-generator-restful",
         "hexo-generator-search": "^2.4.3",
         "hexo-generator-tag": "^0.2.0",
         "hexo-git-backup": "^0.0.3",
