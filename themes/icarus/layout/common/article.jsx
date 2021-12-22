@@ -89,11 +89,11 @@ module.exports = class extends Component {
                     {/* Content/Excerpt */}
                     <div class="content" dangerouslySetInnerHTML={{ __html: index && page.excerpt ? page.excerpt : page.content }}></div>
 
-                    {index ? null : <div>
-                        微信公众号:60分加油站
-                        <img src="/photos/images/OfficialAccountsLogo.png"/>
-                        </div>
-                       
+                    {index ? null : <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+                        <a href="/photos/images/OfficialAccountsLogo.png" class="fancybox fancybox.image" rel="group"><img id="wechat_subscriber_qcode" src="/photos/images/OfficialAccountsLogo.png" alt="Depp Wang wechat" style="width: 200px; max-width: 100%;"></a>
+                        <div>微信公众号:60分加油站</div>
+                    </div>
+
                     }
 
                     {/* Licensing block */}
