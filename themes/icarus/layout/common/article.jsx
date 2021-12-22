@@ -93,7 +93,10 @@ module.exports = class extends Component {
                         <a href="/photos/images/OfficialAccountsLogo.png" class="fancybox fancybox.image" rel="group"><img id="wechat_subscriber_qcode" src="/photos/images/OfficialAccountsLogo.png" alt="60分加油站" style="width: 200px; max-width: 100%;"/></a>
                         <div>微信公众号:60分加油站</div>
                     </div>
-
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+                        <a href="/photos/images/小程序.png" class="fancybox fancybox.image" rel="group"><img id="wechat_freetoknow" src="/photos/images/小程序.png" alt="FreeToKnow" style="width: 200px; max-width: 100%;"/></a>
+                        <div>微信小程序:FreeToKnow</div>
+                    </div>
                     }
 
                     {/* Licensing block */}
