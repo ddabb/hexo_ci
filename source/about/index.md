@@ -9,7 +9,7 @@ date: 2018-11-19 21:44:27
 [人狼羊菜2018年过程版本](https://ddabb.github.io/人狼羊菜2018年过程版本/)  
 [人狼羊菜2018年对象版本](https://ddabb.github.io/人狼羊菜2018年对象版本/)  
 
-### [IT经验](https://ddabb.github.io/categories/IT经验/)
+### [代码世界](https://ddabb.github.io/categories/代码世界/)
 [修正站点次数统计的bug](https://ddabb.github.io/hexo_written_站点统计/)
 [怎么学习C++](https://ddabb.github.io/怎么学习C/)  
 [第一个AI应用](https://ddabb.github.io/第一个AI应用/)  
