@@ -1,5 +1,5 @@
 ---
-title: Setting_up_java_in_Centos
+title: Centos8设置java
 toc: true
 top: 100
 mathjax: false
