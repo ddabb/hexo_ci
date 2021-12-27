@@ -13,25 +13,39 @@ categories:
 ---
 **Visual Studio Code 安装**
 
-安装libXss.so.1
-
+导入Microsoft GPG key：
 
 ```
-yum install libXScrnSaver
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 ```
 
 官网下载vscode
 ```
-wget https://vscode.cdn.azure.cn/stable/0f3794b38477eea13fb47fbe15a42798e6129338/code-1.36.0-1562161214.el7.x86_64.rpm
+sudo gedit /etc/yum.repos.d/vscode.repo
 ```
 
-通过yum 安装
-
+将下面的内容粘贴进去，并且启用 VS Code 源：
 
 ```
-yum install code-1.36.0-1562161214.el7.x86_64.rpm
+[code]
+name=Visual Studio Code
+baseurl=https://packages.microsoft.com/yumrepos/vscode
+enabled=1
+gpgcheck=1
+gpgkey=https://packages.microsoft.com/keys/microsoft.asc
 ```
+保存文件，并且关闭你的文本编辑器。
 
+安装最新版本的 Visual Studio Code，输入：
+```
+sudo dnf install code
+```
+升级visualstudio code
+
+当一个新版本发布时，你可以通过你的桌面软件升级工具或者通过在终端运行下面的命令，来升级 Visual Studio Code：  
+```
+sudo dnf update
+```
 **.net core 安装**
 
 

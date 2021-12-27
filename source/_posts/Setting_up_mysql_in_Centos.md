@@ -5,10 +5,9 @@ top: 100
 mathjax: false
 date: 2021-12-27 06:47:33
 tags:
+- centos
+- mysql
 categories:
+- 代码世界
 ---
-
-
-#参考资料
-* []()
-* []()
+to be continued
