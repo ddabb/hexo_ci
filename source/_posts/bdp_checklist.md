@@ -1,5 +1,5 @@
 ---
-title: 大数据学习技能自检清单
+title: 大数据笔记索引
 toc: true
 top: 100
 mathjax: false
