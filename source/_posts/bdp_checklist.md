@@ -13,7 +13,8 @@ categories:
 
 - [x] 虚拟机安装centos
 - [x] centos8安装java的jdk
-- [x] centos8安装visual studio
+- [x] [Centos ssh免密码登陆配置](https://ddabb.github.io/Setting_up_ssh_in_CentOS/)
+- [x] [centos8安装visual studio](https://ddabb.github.io/Setting_up_visual_studio_code_in_CentOS/)
 - [ ] centos8 java 配置maven
 - [ ] centos8 配置 mysql 8.0
 - [ ] centos8 配置 sqlserver
