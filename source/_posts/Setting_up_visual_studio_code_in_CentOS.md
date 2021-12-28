@@ -1,5 +1,5 @@
 ---
-title: centos安装visualstudio code
+title: centos 配置visualstudio code
 toc: true
 top: 100
 mathjax: false

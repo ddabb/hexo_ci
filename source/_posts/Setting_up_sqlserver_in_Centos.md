@@ -1,5 +1,5 @@
 ---
-title: Setting_up_sqlserver_in_Centos
+title: Centos 8.0 设置SqlServer 数据库
 toc: true
 top: 100
 mathjax: false

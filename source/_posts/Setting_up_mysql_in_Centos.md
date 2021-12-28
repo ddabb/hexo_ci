@@ -1,5 +1,5 @@
 ---
-title: Setting_up_mysql_in_Centos
+title: Centos 8.0 设置mysql8.0 数据库
 toc: true
 top: 100
 mathjax: false
