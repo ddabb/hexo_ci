@@ -11,9 +11,9 @@ categories:
 - 代码世界
 ---
 
-- [X] 虚拟机安装centos
-- [X] centos8安装java的jdk
-- [X] centos8安装visual studio
+- [x] 虚拟机安装centos
+- [x] centos8安装java的jdk
+- [x] centos8安装visual studio
 - [ ] centos8配置maven
 - [ ] centos8配置mysql8.0
 - [ ] centos8配置sqlserver
