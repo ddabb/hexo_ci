@@ -6,7 +6,7 @@ mathjax: false
 date: 2021-12-26 17:48:22
 tags:
 - centos
-- ssh
+- 大数据
 categories:
 - 代码世界
 ---
