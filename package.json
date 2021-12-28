@@ -39,6 +39,7 @@
         "hexo-renderer-inferno": "^0.1.3",
         "hexo-renderer-kramed": "^0.1.2",
         "hexo-renderer-mathjax": "^0.6.0",
+        "hexo-renderer-marked": "^0.3.2",
         "hexo-renderer-stylus": "^2.0.0",
         "hexo-server": "^0.3.3",
         "hexo-symbols-count-time": "^0.4.4",
