@@ -7,7 +7,7 @@ tags:
 - hexo
 - 朋友圈
 categories:
-- Hexo自定义
+- Hexo教程
 ---
 # 序
 我本来想做的分享按钮预期效果如下：

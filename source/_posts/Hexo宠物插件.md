@@ -5,7 +5,7 @@ tags:
 - hexo
 - 宠物
 categories:
-- Hexo自定义
+- Hexo教程
 ---
 # 序
 参考了[hexo 增添宠物](https://blog.csdn.net/qq_43020645/article/details/82794092)这篇文章，但是其内容有相应的遗漏，故写下该文章，以作补充。

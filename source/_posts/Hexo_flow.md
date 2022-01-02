@@ -7,7 +7,7 @@ tags:
 - hexo
 - 流程图
 categories:
-- Hexo自定义
+- Hexo教程
 ---
 # 序
 该文简单介绍一下在Hexo博客上画流程图。
