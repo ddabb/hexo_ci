@@ -20,13 +20,13 @@ categories:
 以下四个图形，虽说有“元旦快乐”的四个字样，但是并不具备唯一解。  
 
 <div style="clear:both; width:800px">
-<div style="float:left;width:400px"> <img src="元初始状态.png"></div>
-<div style="float:right;width:400px"><img src="旦初始状态.png"></div>
+<div style="float:left;width:400px"> <img src="/photos/images/元初始状态.png"></div>
+<div style="float:right;width:400px"><img src="/photos/images/旦初始状态.png"></div>
 </div>
 
 <div style="clear:both; width:800px">
-<div style="float:left;width:400px"> <img src="快初始状态.png"></div>
-<div style="float:right;width:400px"><img src="乐初始状态.png"></div>
+<div style="float:left;width:400px"> <img src="/photos/images/快初始状态.png"></div>
+<div style="float:right;width:400px"><img src="/photos/images/乐初始状态.png"></div>
 </div>
 
 我们可以经由DLX算法可以快速得知
@@ -76,13 +76,13 @@ after  = 312;
 最终生成的结果如下，难度不大。
 
 <div style="clear:both; width:800px">
-<div style="float:left;width:400px"> <img src="元.png"></div>
-<div style="float:right;width:400px"><img src="旦.png"></div>
+<div style="float:left;width:400px"> <img src="/photos/images/元.png"></div>
+<div style="float:right;width:400px"><img src="/photos/images/旦.png"></div>
 </div>
 
 <div style="clear:both; width:800px">
-<div style="float:left;width:400px"> <img src="快.png"></div>
-<div style="float:right;width:400px"><img src="乐.png"></div>
+<div style="float:left;width:400px"> <img src="/photos/images/快.png"></div>
+<div style="float:right;width:400px"><img src="/photos/images/乐.png"></div>
 </div>
 
 # 逆向思维
