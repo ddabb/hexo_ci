@@ -3,7 +3,7 @@ name: GitHub Pages
 on:
   push:
     branches:
-      - main  # Set a branch name to trigger deployment
+      - main # Set a branch name to trigger deployment
   pull_request:
 
 jobs:
@@ -14,8 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+          submodules: true # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
       - run: npm install hexo-cli -g
       - run: npm install
       - run: hexo clean
@@ -24,10 +24,9 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          personal_token: ${{ secrets.ACTIONS_DEPLOY_KEY }} #采用的是 Personal Access Token Hexo-Deploy-No-expired
           external_repository: ddabb/ddabb.github.io
           publish_dir: ./public
           user_name: ddabb
           user_email: 417144452@qq.com
           publish_branch: main
-
