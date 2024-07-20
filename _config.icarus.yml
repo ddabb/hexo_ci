@@ -99,7 +99,7 @@ sidebar:
   right:
     sticky: false
 widgets:
-  - position: left
+  - position: right
     type: profile
     author: 十六
     author_title: 程序员
@@ -112,12 +112,12 @@ widgets:
       Github:
         icon: fab fa-github
         url: https://github.com/ddabb
-  - position: left
+  - position: right
     type: toc
     index: true
     collapsed: true
     depth: 3
-  - position: left
+  - position: right
     type: links
     links:
       网站源码: https://github.com/ddabb/hexo_ci
@@ -125,19 +125,19 @@ widgets:
       百家号: https://baijiahao.baidu.com/u?app_id=1618115111689564
       知乎: https://www.zhihu.com/people/60points
       今日头条: https://www.toutiao.com/c/user/token/MS4wLjABAAAAeVT3k75rtRi9XJfGmmRa0DoM6b_dwXbHu4fDL9r0RL9LGqAVMh7puZ0EFcsQ3QbT
-  - position: left
+  - position: right
     type: categories
-  - position: left
+  - position: right
     type: recent_posts
-  - position: left
+  - position: right
     type: archives
-  - position: left
+  - position: right
     type: tags
-  - position: left
+  - position: right
     type: subscribe_email
     description:
     feedburner_id: ""
-  - position: left
+  - position: right
     type: followit
     description:
     action_url: ""
