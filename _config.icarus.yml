@@ -182,3 +182,8 @@ providers:
   cdn: jsdelivr
   fontcdn: google
   iconcdn: fontawesome
+baidusitemap:
+  path: baidusitemap.xml
+  # 其他配置项，如：site, url, charset, generate等
+sitemap:
+  path: sitemap.xml
