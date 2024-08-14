@@ -43,9 +43,6 @@ skip_render:
   - BingSiteAuth.xml
   - robots.txt
 
-partial:
-  - google_adsense
-
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
@@ -164,6 +161,10 @@ restful:
   post: true # 文章数据
   pages: true
   simple_post_map: true #简单格式化,是否序列化content等内容的 开关
+
+widgets: # 侧边栏小工具
+  type: adsense
+  client_id: ca-pub-9093386396178901
 
 marked:
   gfm: true
