@@ -141,7 +141,7 @@ widgets:
   - position: right
     type: adsense
     client_id: ca-pub-9093386396178901
-    slot_ids:
+    slot_id:
       - "9402252531"
       - "2971741406"
       - "7099522829"
