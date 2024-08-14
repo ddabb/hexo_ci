@@ -139,6 +139,9 @@ widgets:
     description:
     feedburner_id: ""
   - position: right
+    type: adsense
+    client_id: ca-pub-9093386396178901
+  - position: right
     type: followit
     description:
     action_url: ""
